@@ -65,3 +65,25 @@ li a:hover {
   width: 80%;
   height: 400px;
 }
+
+#player{
+
+      
+
+}
+
+.main_content{
+
+   float:left;
+   width:20%;
+
+}
+
+.div_body{
+
+
+
+  float:right;
+
+  width:80%;
+}
