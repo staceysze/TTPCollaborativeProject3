@@ -8,13 +8,28 @@
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <nav>
-    <ul class="nav-bar">
-      <li><a href="home.html"><img src="images/logo1.png" alt="Logo Here!" id="logo"/></a></li?
-      <li><a href="home.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-    </ul>
-  </nav>
+  <div class="main_content">
+    <nav>
+      <ul id="nav_ul">
+        <li><a class="logo" href="home.html"><img src="images/logo1.png" alt="Logo Here!" width="150px" height="125px"/></a></li>
+        <li><a class="links" href="home.html">HOME</a></li>
+        <li><a class="links" href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="div_body">
+    <div id="top_div">
+      <h2> Search By Artist: </h2>
+      <form id="search">
+        <input name="q" type="text" placeholder="Search">
+      <!--  <input name="type" type="text" placeholder="Type">  -->
+        <input name="submit" type="submit">
+      </form>
+    </div>
+    <div id="images"></div>
+  </div>
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

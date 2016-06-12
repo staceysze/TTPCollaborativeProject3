@@ -1,7 +1,27 @@
-function initMap() {
-  var mapDiv = document.getElementById('map');
-  var map = new google.maps.Map(mapDiv, {
-    center: {lat: 44.540, lng: -78.546},
-    zoom: 8
+$(document).ready(function(){
+  $("#search").on("submit",function(e){
+    e.preventDefault();
+    var target = e.target;
+    var formData = {
+      'q' : $('input[name=q]').val(),
+      'type' : 'album'
+    };
+    $.ajax({
+      type: "GET",
+      url: 'https://api.spotify.com/v1/search',
+      data: formData,
+      success: function(response) {
+        var albumArray = response.albums.items;
+        for(var i=0; i<albumArray.length; i++){
+          for(var j = 0; j<albumArray[i].images.length; j++) {
+              if(albumArray[i].images[j].height === 300) {
+                var pictureURL = albumArray[i].images[j].url;
+                console.log(albumArray[i].images[j].url);
+                $('#images').prepend($('<img>',{src:pictureURL}))
+              } //if
+          } //for j
+        } // for i
+      }//
+    });
   });
-}
+});
