@@ -59,7 +59,7 @@ var modalImg = document.getElementById("img01");
 
 img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src =img.src;
+    modalImg.src ="https://iamokema.files.wordpress.com/2012/08/i-love-music-wallpapers-3.jpeg";
 
   }
 
