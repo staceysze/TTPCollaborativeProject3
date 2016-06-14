@@ -7,6 +7,7 @@ $(document).ready(function(){
       'q' : $('input[name=q]').val(),
       'type' : 'album'
     };
+
     $.ajax({
       type: "GET",
       url: 'https://api.spotify.com/v1/search',
@@ -42,3 +43,31 @@ $(document).ready(function(){
     });//ajax
   });//on
 });//ready
+
+
+
+
+
+//modal
+
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal 
+var img = document.getElementById('gallery');
+var modalImg = document.getElementById("img01");
+
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src ="https://iamokema.files.wordpress.com/2012/08/i-love-music-wallpapers-3.jpeg";
+
+  }
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
