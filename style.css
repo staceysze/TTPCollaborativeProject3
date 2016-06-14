@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -12,9 +12,11 @@ body {
 }
 
 .div_body {
+  margin: 0;
+  padding: 0;
   width: 89%;
+  height: 100%;
   float: right;
-  background-color: black;
 }
 
 nav {
@@ -70,8 +72,8 @@ li a.links:hover {
 
 #about_body {
   margin: 0;
-  padding: 0;
-  z-index: 100;
+  width: 1200px;
+  height: 2000px;
   background-color: black;
 }
 
@@ -108,7 +110,18 @@ img {
   text-align: center;
 }
 
-
+#text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px 200px 20px 100px;
+  color: white;
+}
+#insta_div {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
 
 /* The Modal (background) */
 .modal {
@@ -187,6 +200,3 @@ img {
         width: 100%;
     }
 }
-
-
-
