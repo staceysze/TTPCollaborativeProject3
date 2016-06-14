@@ -24,7 +24,7 @@ $(document).ready(function(){
               else if (albumArray[i].images[j].height === 300){
                 var pictureURL = albumArray[i].images[j].url;
                 console.log(albumArray[i].images[j].url);
-                $('#gallery').prepend($('<img>',{src:pictureURL}));
+                $('#gallery').prepend($('<img>',{src:pictureURL, id:pictureURL}));
               }
           } //for j
         } // for i
@@ -39,6 +39,27 @@ $(document).ready(function(){
               .appendTo('#images');
           },  3000);
         });//carousel
+
+
+        var modal = document.getElementById('myModal');  //modal
+        var img = document.getElementById('gallery');  // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("img01");
+        // img.onclick = function(){
+        //     modal.style.display = "block";
+        //     modalImg.src ="https://iamokema.files.wordpress.com/2012/08/i-love-music-wallpapers-3.jpeg";
+        // }
+        $('img').click(function(event) {
+          modal.style.display = "block";
+          modalImg.src = event.target.id;
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
       }//success
     });//ajax
   });//on
@@ -48,20 +69,20 @@ $(document).ready(function(){
 
 
 
-//modal
+// //modal
+//
+// var modal = document.getElementById('myModal');
+//
+// // Get the image and insert it inside the modal
+// var img = document.getElementById('gallery');
+// var modalImg = document.getElementById("img01");
 
-var modal = document.getElementById('myModal');
 
-// Get the image and insert it inside the modal 
-var img = document.getElementById('gallery');
-var modalImg = document.getElementById("img01");
-
-
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src ="https://iamokema.files.wordpress.com/2012/08/i-love-music-wallpapers-3.jpeg";
-
-  }
+// img.onclick = function(){
+//     modal.style.display = "block";
+//     modalImg.src ="https://iamokema.files.wordpress.com/2012/08/i-love-music-wallpapers-3.jpeg";
+//
+//   }
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -70,4 +91,3 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
     modal.style.display = "none";
 }
-

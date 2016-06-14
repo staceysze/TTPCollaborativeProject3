@@ -14,6 +14,7 @@ body {
 .div_body {
   width: 89%;
   float: right;
+  background-color: black;
 }
 
 nav {
@@ -44,12 +45,6 @@ li {
   font-weight: bolder;
   background-color: rgba(25, 0, 0, 0);
 }
-/*li a.logo {
-  margin: 0;
-  padding: 0;
-  display: block;
-  text-decoration: none;
-}*/
 
 li a.links {
   margin: 0;
@@ -73,13 +68,38 @@ li a.links:hover {
   padding: 20px 0 20px 0;
 }
 
+#about_body {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  background-color: black;
+}
+
 h1 {
   font-family:'Quicksand', sans-serif;
 }
 
+.social_icons {
+  position: fixed;
+  background-color: transparent;
+  margin-left: 1050px;
+  margin-right: 10px;
+}
+
+img {
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+}
+
+.icon_ul {
+  margin: 0;
+  padding: 0;
+}
+
 #images {
+  padding: 20px 0 10px 0;
   background-color: rgb(38, 38, 38);
-  height: 645px;
+  height: 670px;
   text-align: center;
 }
 
